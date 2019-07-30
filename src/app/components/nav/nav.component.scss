@@ -1,0 +1,39 @@
+@import 'https://bootswatch.com/4/journal/bootstrap.css';
+$red: #e74c3c;
+$yellow: #f1c40f;
+$purple: #8e44ad;
+$dark-purple: #010059;
+$green: #2ecc71;
+$blue: #3498db;
+$light-blue: #a6e3e9;
+$black: #222831;
+$dark-blue: #2c3e50;
+$dirty-white: #ecf0f1;
+$orange: #e67e22;
+$light-green: #9df3c4;
+$font: "Montserrat", sans-serif;
+.navbar {
+    display: flex;
+    border: none;
+    background: transparent !important; 
+    margin-top:7em;
+    #navbarColor03 {
+        .nav-link{
+            &:hover {
+               border-radius: 50px;
+               transition: all 0.5s ease;
+               background: $dirty-white;
+               color: $purple;
+            }
+        }
+    }
+}
+#navbarColor03 ul li i {
+    padding: 7px;
+}
+.custom {
+    transition: all 0.6s ease-in-out;
+    background: #fff !important;
+    box-shadow:  20px 20px 50px  rgba(0, 0, 0, 0.12);
+
+}

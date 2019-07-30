@@ -1,0 +1,162 @@
+$red: #e74c3c;
+$yellow: #f1c40f;
+$purple: #8e44ad;
+$dark-purple: #804399;
+$green: #2ecc71;
+$blue: #3498db;
+$light-blue: #a6e3e9;
+$black: #222831;
+$dark-blue: #2c3e50;
+$dirty-white: #ecf0f1;
+$orange: #e67e22;
+$light-green: #9df3c4;
+$font: "Montserrat", sans-serif;
+
+*{
+  p {
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+  }
+}
+.hero {
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+  
+    .diagonal-hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 680px;
+        background: #2b5876; 
+        background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  
+        background: linear-gradient(to right, #4e4376, #2b5876); 
+        
+        z-index: -1;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+        
+        
+        .text-style {
+          position: absolute;
+          left: 50%;
+          top:50%;
+          transform: translate(-50%,-50%);
+          font-size: 76px;
+          text-transform: uppercase;
+          color:#4e4376;
+          text-shadow: 0 0 80px  #ffffff;
+          padding:10px;
+          border: 1px solid #ffffff;
+          border-radius: 5px;
+          transition: 0.5s ease-in-out;
+          background: #f6f6f6;
+
+          h2 {
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          
+        
+        }
+
+      }
+      
+    
+      @function stars($n) {
+        $value: '#{random(2000)}px #{random(2000)}px #767676';
+        @for $i from 2 through $n {
+          $value: '#{$value} , #{random(2000)}px #{random(2000)}px #767676';
+        }
+        @return unquote($value);
+      }
+      
+       
+      $stars-small: stars(800);
+      $stars-medium: stars(400);
+      $stars-big: stars(600);
+      
+      
+      .stars {
+        z-index:0;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transition: opacity 1s ease-in-out;
+      }
+      
+      .stars > .small {
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: $stars-small;
+        animation: starsAnimation 50s linear infinite;
+      
+        &:after {
+          content: " ";
+          position: absolute;
+          top: 2000px;
+          width: 1px;
+          height: 1px;
+          background: transparent;
+          box-shadow: $stars-small;
+        }
+      }
+      
+      .stars > .medium {
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: $stars-medium;
+        animation: starsAnimation 100s linear infinite;
+      
+        &:after {
+          content: " ";
+          position: absolute;
+          top: 2000px;
+          width: 2.3px;
+          height: 2.3px;
+          background: transparent;
+          box-shadow: $stars-medium;
+        }
+      }
+      
+      .stars > .big {
+        width: 3.3px;
+        height: 3.3px;
+        background: transparent;
+        box-shadow: $stars-big;
+        border-radius: 100%;
+        animation: starsAnimation 150s linear infinite;
+      
+        &:after {
+          content: " ";
+          position: absolute;
+          top: 2000px;
+          width: 4px;
+          height: 4px;
+          background: transparent;
+          box-shadow: $stars-big;
+          border-radius: 100%;
+        }
+      }
+      
+      
+      @keyframes starsAnimation {
+        from {
+          transform: translateY(-2500px);
+        }
+        to {
+          transform: translateY(0px);
+        }
+      }
+      
+  }
+  
+  
+

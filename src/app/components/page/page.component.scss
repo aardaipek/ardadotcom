@@ -1,0 +1,205 @@
+$red: #e74c3c;
+$yellow: #f1c40f;
+$purple: #8e44ad;
+$dark-purple: #010059;
+$green: #2ecc71;
+$blue: #3498db;
+$light-blue: #a6e3e9;
+$black: #222831;
+$dark-blue: #2c3e50;
+$dirty-white: #ecf0f1;
+$orange: #e67e22;
+$light-green: #9df3c4;
+$font: "Montserrat", sans-serif;
+
+html {
+  scroll-behavior: smooth;
+}
+.section-title {
+  margin-bottom: 3rem;
+  color: $dark-purple;
+}
+p {
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+}
+
+section {
+  margin-top: 3rem;
+}
+
+.section1 {
+  .title {
+    h1 {
+      color: $dark-blue;
+      text-decoration: underline;
+    }
+    h3 {
+      color: $purple;
+    }
+    hr {
+      margin-bottom: 6em;
+    }
+  }
+  .summary {
+    padding: 20px;
+  }
+}
+
+.section2 {
+  margin-top: 7rem;
+
+  .work-experience {
+    padding: 20px;
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      background: #fff;
+      transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+        0.3s box-shadow,
+        0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+      padding: 14px 80px 18px 36px;
+      //cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.12),
+          0 4px 8px rgba(0, 0, 0, 0.06);
+      }
+      .experience-title {
+        margin-top: 50px;
+          .company{
+            text-decoration: underline;
+          }
+          h4{
+            color: $purple;
+          }
+      }
+      .experience-summary {
+        margin-top: 30px;
+        margin-bottom: 50px;
+      }
+      p{
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+.section3 {
+  margin-bottom: 10em;
+  .row {
+    margin-left: 10em;
+    margin-top:4rem;
+    .left {
+      a {
+        color: #414141;
+        i {
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+      .card-1 {
+        background-image: url("../../../assets/github-brands.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 90px;
+        padding: 7em;
+      }
+    }
+    .right {
+      font-size: 1.3rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+  .card {
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+    transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+      0.3s box-shadow,
+      0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+    padding: 14px 80px 18px 36px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.12),
+        0 4px 8px rgba(0, 0, 0, 0.06);
+    }
+    img {
+      position: absolute;
+      top: 20px;
+      right: 15px;
+      max-height: 120px;
+    }
+  }
+
+  
+}
+
+.section4 {
+  margin-bottom: 10em;
+  .card {
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+    transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+      0.3s box-shadow,
+      0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+    padding: 14px 80px 18px 36px;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 100px 5px rgba(0, 0, 0, 0.12), 10px 4px 8px rgba(0, 0, 0, 0.06)
+  }
+
+  .card-1 {
+    background-image: url("../../../assets/LI-Logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130px;
+    padding: 6em;
+  }
+
+  .card-2 {
+    background-image: url("../../../assets/Twitter_Logo_Blue.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+    padding: 6em;
+  }
+
+  .card-3 {
+    background-image: url(https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130px;
+    padding: 6em;
+  }
+  .card-4 {
+    background-image: url("../../../assets/google-gmail-seeklogo.com.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90px;
+    padding: 6em;
+  }
+
+  @media (max-width: 990px) {
+    .card {
+      margin: 20px;
+    }
+  }
+}
+
+footer {
+  box-shadow:25px 15px 15px 15px rgba(0, 0, 0, 0.12);
+  .container {
+    padding: 1em;
+  }
+}
