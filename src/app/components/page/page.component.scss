@@ -11,6 +11,42 @@ $dirty-white: #ecf0f1;
 $orange: #e67e22;
 $light-green: #9df3c4;
 $font: "Montserrat", sans-serif;
+$font-size-work-title :1.1rem;
+$global-p-font-size : 1rem;
+
+// Global Card Styles
+.card { 
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  padding: 14px 80px 18px 36px;
+  //cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.12),
+      0 4px 8px rgba(0, 0, 0, 0.06);
+  }
+  .experience-title {
+    margin-top: 50px;
+      .company{
+        text-decoration: underline;
+      }
+      h4{
+        color: $purple;
+      }
+  }
+  .experience-summary {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  p{
+    font-size: $font-size-work-title;
+  }
+}
 
 html {
   scroll-behavior: smooth;
@@ -20,7 +56,7 @@ html {
   color: $dark-purple;
 }
 p {
-  font-size: 1.3rem;
+  font-size: $global-p-font-size;
   letter-spacing: 0.2rem;
 }
 
@@ -81,7 +117,7 @@ section {
         margin-bottom: 50px;
       }
       p{
-        font-size: 1.6rem;
+        font-size: $font-size-work-title;
       }
     }
   }
@@ -110,7 +146,7 @@ section {
       }
     }
     .right {
-      font-size: 1.3rem;
+      font-size: $global-p-font-size ;
       letter-spacing: 0.2rem;
     }
   }
