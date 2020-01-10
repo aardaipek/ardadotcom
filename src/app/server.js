@@ -1,16 +1,17 @@
-const express = require('express');
-const path = require('path');
+const express = require('express'),
+http    = require('http'),
+path    = require('path');
+
 const app = express();
 
-// Serve static files....
-app.use(express.static(__dirname + '/dist/ardadotcom'));
+app.use(express.static(path.join(__dirname, 'dist/ardadotcom')));
 
-// Send all requests to index.html
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/ardadotcom/index.html'));
-});
+app.get('*', (req,res) => {
+res.sendFile(path.join(__dirname, 'dist/ardadotcom/index.html'));
+})
 
-// default Heroku PORT
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode.", this.address().port, app.settings.env);
-});
+const port = process.env.PORT || '4201';
+app.set('port', port);
+
+const server = http.createServer(app);
+server.listen(port,() => console.log('Running at port '+port))
