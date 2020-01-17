@@ -33,9 +33,6 @@ $font: "Montserrat", sans-serif;
 #navbarColor03 ul li i {
     padding: 7px;
 }
-.custom {
-    transition: all 0.6s ease-in-out;
-    background: $navbar-scroll-color !important;
-    box-shadow:  20px 20px 50px  rgba(0, 0, 0, 0.12);
-
+.printButton {
+    color: $red !important;
 }

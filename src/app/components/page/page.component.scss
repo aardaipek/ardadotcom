@@ -230,6 +230,50 @@ section {
   }
 }
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 499px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #button {
+      width: 10px;
+      height: 10px;
+    }
+}
+
+#button {
+  display: inline-block;
+  background-color: $blue;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\👍";
+  line-height: 50px;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: $purple;
+
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
 footer {
   box-shadow:25px 15px 15px 15px rgba(0, 0, 0, 0.12);
   .container {

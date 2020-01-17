@@ -1,18 +1,5 @@
-<div class="hero">
-  <div class="diagonal-hero-bg">
-    <div class="text-style">
-      <span class="text-style__word">Expect</span>
-      <span class="text-style__word">the</span>
-      <span class="text-style__word"> Unexpected.</span>
-    </div>
-    <div class="stars">
-      <div class="small"></div>
-      <div class="medium"></div>
-      <div class="big"></div>
-    </div>
-  </div>
-</div>
+<app-hero></app-hero>
+<app-nav></app-nav>
+<router-outlet></router-outlet>
+<app-page *ngIf="!isResumePage"></app-page>
 
-<app-page>
-
-</app-page>

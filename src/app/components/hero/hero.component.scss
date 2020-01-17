@@ -1,0 +1,197 @@
+$red: #e74c3c;
+$yellow: #f1c40f;
+$purple: #8e44ad;
+$dark-purple: #804399;
+$green: #2ecc71;
+$blue: #3498db;
+$light-blue: #a6e3e9;
+$black: #222831;
+$dark-blue: #2c3e50;
+$dirty-white: #ecf0f1;
+$orange: #e67e22;
+$light-green: #9df3c4;
+$font: "Montserrat", sans-serif;
+
+* {
+  p {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+  }
+}
+.hero {
+  display: inline-block;
+  width: 100%;
+  height: 500px;
+
+  .diagonal-hero-bg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 680px;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    transition-timing-function  :  cubic-bezier(0, 0, 0.58, 1);
+    /* The typing effect */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+      from,
+      to {
+        border-radius: 100px;
+      }
+    }
+    .text-style {
+      position: absolute;
+      //left: 50%;
+      // top:50%;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: none; /* The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: 0.15em; /* Adjust as needed */
+      animation: typing 3.5s steps(80, end), blink-caret 0.75s step-end infinite;
+     
+      &__word {
+        font-size: 3.6rem;
+        text-align: center;
+        line-height: 1.1;
+        color: #f0e3ff;
+        animation: neon 0.1s ease-in-out infinite alternate;
+      }
+      // transform: translate(-50%,-50%);
+      // font-size: 76px;
+      // text-transform: uppercase;
+      // color: #222831;
+      // text-shadow: 0 0 80px  #ffffff;
+      // padding:15px;
+      // border: 1px solid #ffffff;
+      // border-radius: 15px;
+      // transition: 0.5s ease-in-out;
+      // background: #f6f6f6;
+
+      // h2 {
+      //   transition: 0.5s ease-in-out;
+
+      //   &:hover {
+      //     transform: scale(1.1);
+      //   }
+      // }
+    }
+  }
+  @keyframes neon {
+    from {
+      text-shadow: 0 0 8px rgba(202, 228, 225, 0.92),
+        0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52),
+        0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78),
+        0 0 54px rgba(30, 132, 242, 0.92);
+    }
+    to {
+      text-shadow: 0 0 10px rgba(202, 228, 225, 0.98),
+        0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
+        0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
+        0 0 60px rgba(30, 132, 242, 1);
+    }
+  }
+
+  @function stars($n) {
+    $value: "#{random(2000)}px #{random(2000)}px #767676";
+    @for $i from 2 through $n {
+      $value: "#{$value} , #{random(2000)}px #{random(2000)}px #767676";
+    }
+    @return unquote($value);
+  }
+
+  $stars-small: stars(1800);
+  $stars-medium: stars(400);
+  $stars-big: stars(1000);
+
+  .stars {
+    z-index: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .stars > .small {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $stars-small;
+    animation: starsAnimation 50s linear infinite;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      box-shadow: $stars-small;
+    }
+  }
+
+  .stars > .medium {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $stars-medium;
+    animation: starsAnimation 100s linear infinite;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 2.3px;
+      height: 2.3px;
+      background: transparent;
+      box-shadow: $stars-medium;
+    }
+  }
+
+  .stars > .big {
+    width: 3.3px;
+    height: 3.3px;
+    background: transparent;
+    box-shadow: $stars-big;
+    border-radius: 100%;
+    animation: starsAnimation 150s linear infinite;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 4px;
+      height: 4px;
+      background: transparent;
+      box-shadow: $stars-big;
+      border-radius: 100%;
+    }
+  }
+
+  @keyframes starsAnimation {
+    from {
+      transform: translateY(-2500px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+}
