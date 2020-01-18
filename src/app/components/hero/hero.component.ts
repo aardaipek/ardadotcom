@@ -32,7 +32,7 @@ export class HeroComponent implements OnInit {
   changeBackground(){
       setInterval(()=>{
         this.background = this.backgroundColor[Math.floor(Math.random() * this.backgroundColor.length)];
-      },6000)
+      },15000)
     
   }
 

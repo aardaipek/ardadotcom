@@ -5,9 +5,7 @@ import { PageComponent } from './components/page/page.component';
 
 const routes: Routes = [
  
-  { path: ' ', component: PageComponent },
-  { path:'resume', component: ResumeComponent }
-
+  { path: ' ', component: PageComponent }
 ];
 
 @NgModule({
