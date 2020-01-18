@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent implements OnInit {
-    background = "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)";
+    background =  "linear-gradient(60deg, #29323c 0%, #485563 100%)"
     transition = "background 0.2s ease-in-out";
   backgroundColor = [
       " linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)",

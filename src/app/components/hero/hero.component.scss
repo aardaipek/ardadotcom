@@ -63,7 +63,7 @@ $font: "Montserrat", sans-serif;
       border-right: none; /* The typwriter cursor */
       white-space: nowrap; /* Keeps the content on a single line */
       margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-      letter-spacing: 0.15em; /* Adjust as needed */
+      letter-spacing: 0.35em; /* Adjust as needed */
       animation: typing 3.5s steps(80, end), blink-caret 0.75s step-end infinite;
      
       &__word {
@@ -73,36 +73,19 @@ $font: "Montserrat", sans-serif;
         color: #f0e3ff;
         animation: neon 0.1s ease-in-out infinite alternate;
       }
-      // transform: translate(-50%,-50%);
-      // font-size: 76px;
-      // text-transform: uppercase;
-      // color: #222831;
-      // text-shadow: 0 0 80px  #ffffff;
-      // padding:15px;
-      // border: 1px solid #ffffff;
-      // border-radius: 15px;
-      // transition: 0.5s ease-in-out;
-      // background: #f6f6f6;
 
-      // h2 {
-      //   transition: 0.5s ease-in-out;
-
-      //   &:hover {
-      //     transform: scale(1.1);
-      //   }
-      // }
     }
   }
   @keyframes neon {
     from {
-      text-shadow: 0 0 8px rgba(202, 228, 225, 0.92),
-        0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52),
+      text-shadow: 0 0 8px rgba(32, 221, 199, 0.92),
+        0 0 30px rgba(124, 240, 226, 0.699), 0 0 12px rgba(30, 132, 242, 0.52),
         0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78),
         0 0 54px rgba(30, 132, 242, 0.92);
     }
     to {
       text-shadow: 0 0 10px rgba(202, 228, 225, 0.98),
-        0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
+        0 0 30px rgba(28, 228, 204, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
         0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
         0 0 60px rgba(30, 132, 242, 1);
     }
