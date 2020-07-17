@@ -21,7 +21,7 @@ $font: "Montserrat", sans-serif;
 .hero {
   display: inline-block;
   width: 100%;
-  height: 500px;
+  height: 300px;
 
   .diagonal-hero-bg {
     position: absolute;
@@ -30,7 +30,7 @@ $font: "Montserrat", sans-serif;
     top: 0;
     left: 0;
     width: 100%;
-    height: 680px;
+    height: 480px;
     z-index: -1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     transition-timing-function  :  cubic-bezier(0, 0, 0.58, 1);
