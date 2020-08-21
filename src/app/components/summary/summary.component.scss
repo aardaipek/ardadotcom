@@ -1,0 +1,63 @@
+$red: #e74c3c;
+$yellow: #f1c40f;
+$purple: #8e44ad;
+$dark-purple: #010059;
+$green: #2ecc71;
+$blue: #3498db;
+$light-blue: #a6e3e9;
+$black: #222831;
+$dark-blue: #2c3e50;
+$dirty-white: #ecf0f1;
+$orange: #e67e22;
+$light-green: #9df3c4;
+$font-size-work-title :1.1rem;
+$global-p-font-size : 1rem;
+
+
+.section1 {
+    .title {
+      h1 {
+        color: $dark-blue;
+        text-decoration: underline;
+      }
+      h3 {
+        color: $purple;
+      }
+      hr {
+        margin-bottom: 6em;
+      }
+    }
+    .card { 
+      border: none;
+      border-radius: 10px;
+      background: #fff;
+      transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+        0.3s box-shadow,
+        0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+      padding: 14px 80px 18px 36px;
+      //cursor: pointer;
+    
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.12),
+          0 4px 8px rgba(0, 0, 0, 0.06);
+      }
+      .experience-title {
+        margin-top: 50px;
+          .company{
+            text-decoration: underline;
+          }
+          h4{
+            color: $purple;
+          }
+      }
+      .experience-summary {
+        margin-top: 30px;
+        margin-bottom: 50px;
+      }
+      p{
+        font-size: $font-size-work-title;
+      }
+    }
+   
+  }

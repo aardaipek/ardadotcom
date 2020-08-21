@@ -1,0 +1,70 @@
+$red: #e74c3c;
+$yellow: #f1c40f;
+$purple: #8e44ad;
+$dark-purple: #010059;
+$green: #2ecc71;
+$blue: #3498db;
+$light-blue: #a6e3e9;
+$black: #222831;
+$dark-blue: #2c3e50;
+$dirty-white: #ecf0f1;
+$orange: #e67e22;
+$light-green: #9df3c4;
+$font-size-work-title :1.1rem;
+$global-p-font-size : 1rem;
+
+.section4 {
+    margin-bottom: 10em;
+    .card {
+      border: none;
+      border-radius: 10px;
+      background: #fff;
+      transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+        0.3s box-shadow,
+        0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+      padding: 14px 80px 18px 36px;
+      cursor: pointer;
+    }
+  
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 100px 5px rgba(0, 0, 0, 0.12), 10px 4px 8px rgba(0, 0, 0, 0.06)
+    }
+  
+    .card-1 {
+      background-image: url("../../../assets/LI-Logo.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 130px;
+      padding: 6em;
+    }
+  
+    .card-2 {
+      background-image: url("../../../assets/Twitter_Logo_Blue.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100px;
+      padding: 6em;
+    }
+  
+    .card-3 {
+      background-image: url(https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 130px;
+      padding: 6em;
+    }
+    .card-4 {
+      background-image: url("../../../assets/google-gmail-seeklogo.com.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 90px;
+      padding: 6em;
+    }
+  
+    @media (max-width: 990px) {
+      .card {
+        margin: 20px;
+      }
+    }
+  }

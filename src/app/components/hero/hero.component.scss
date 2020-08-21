@@ -10,12 +10,10 @@ $dark-blue: #2c3e50;
 $dirty-white: #ecf0f1;
 $orange: #e67e22;
 $light-green: #9df3c4;
-$font: "Montserrat", sans-serif;
 
 * {
   p {
     font-size: 1.6rem;
-    letter-spacing: 0.1rem;
   }
 }
 .hero {
@@ -63,7 +61,7 @@ $font: "Montserrat", sans-serif;
       border-right: none; /* The typwriter cursor */
       white-space: nowrap; /* Keeps the content on a single line */
       margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-      letter-spacing: 0.35em; /* Adjust as needed */
+       /* Adjust as needed */
       animation: typing 3.5s steps(80, end), blink-caret 0.75s step-end infinite;
      
       &__word {
